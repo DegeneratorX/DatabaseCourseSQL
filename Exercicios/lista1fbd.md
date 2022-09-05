@@ -1,5 +1,0 @@
-- Relacione as principais vantagens de usar sistemas de bancos de dados sobre sistemas de arquivos em aplicações que operam sobre grandes volumes de dados.
-    - No geral, nos SGBSs, as querys são mais rápidas, e a segurança é maior para se trabalhar com esses dados. Também possuem compatibilidade com uma ampla quantidade de serviços, são mais estáveis e casa bem com muitas linguagens de programação, que automatizam processos de consulta por trás. Há um amplo nível de customização, pode usufruir de espaço indeterminado dos servidores para gerenciar esses dados, tem mecanismos que preservam os dados armazenados em caso de falha no sistema, e garantem uma maior independência dos dados.
-
-- Defina modelo de dados e relacione as principais abstrações do modelo relacional.
-    - É um conjunto de abstrações implementadas pelo SGBD pra descrever os dados.
