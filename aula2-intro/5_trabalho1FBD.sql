@@ -7,7 +7,7 @@ create table alunos (
 	ender varchar(100) NOT NULL,
 	sex char(1) NOT NULL,
 	foreign key (id_cur) references cursos(id_cur)
-),
+);
 
 create table matriculas(
 	matricula int NOT NULL,
@@ -17,7 +17,7 @@ create table matriculas(
 	ON DELETE CASCADE,
 	foreign key (id_disc) references disciplinas(id_disc)
 	ON DELETE CASCADE
-),
+);
 
 create table disciplinas (
 	id_disc int primary key,
@@ -28,7 +28,7 @@ create table disciplinas (
 	id_cur int NOT NULL,
 	foreign key (id_prof) references professores,
 	foreign key (id_cur) references cursos
-),
+);
 
 CREATE TABLE cursos(
 	id_cur INT,
@@ -38,8 +38,8 @@ CREATE TABLE cursos(
 	id_cen int NOT NULL,
 	PRIMARY KEY (id_cur),
 	foreign key (id_cen) references centros(id_cen) ON DELETE CASCADE,
-	foreign key (coordenador) references professores(id_prof) NOT NULL
-),
+	foreign key (coordenador) references professores(id_prof)
+);
 
 create table professores (
 	id_prof int,
@@ -51,7 +51,7 @@ create table professores (
 	id_reitor int unique,
 	data_adm date,
 	primary key (id_prof)
-),
+);
 
 create table centros (
 	id_cen int,
@@ -60,7 +60,7 @@ create table centros (
 	diretor int NOT NULL UNIQUE,
 	primary key (id_cen),
 	foreign key (diretor) references professores(id_prof)
-),
+);
 
 
 create table campus (
@@ -68,7 +68,7 @@ create table campus (
 	nome varchar(50) NOT NULL,
 	cidade varchar(50) NOT NULL,
 	primary key (id_camp)
-),
+);
 
 create table turmas (
 	id_turm int,
@@ -81,7 +81,7 @@ create table turmas (
 	primary key (id_turm),
 	foreign key (id_disc) references disciplinas(id_disc),
 	foreign key (id_loc) references locais (id_loc)
-),
+);
 
 create table locais (
 	id_loc int,
@@ -93,4 +93,4 @@ create table locais (
 	tipo varchar(50) NOT NULL,
 	primary key (id_loc),
 	foreign key (id_cen) references centros(id_cen)
-)
+);
