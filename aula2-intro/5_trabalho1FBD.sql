@@ -49,7 +49,7 @@ create table professores (
 	sexo char(1) NOT NULL,
 	nasc date NOT NULL,
 	id_reitor int unique,
-	data_adm date,
+	data_adm date NOT NULL,
 	primary key (id_prof)
 );
 
@@ -60,6 +60,7 @@ create table centros (
 	diretor int NOT NULL UNIQUE,
 	primary key (id_cen),
 	foreign key (diretor) references professores(id_prof)
+	foreign key (id_camp) references campus(id_camp)
 );
 
 
@@ -74,7 +75,7 @@ create table turmas (
 	id_turm int,
 	id_disc int NOT NULL,
 	semestre char(6) NOT NULL,
-	estado char(1) NOT NULL,
+	estado char(10) NOT NULL,
 	id_loc int NOT NULL,
 	hor char(11) NOT NULL,
 	dias varchar(50) NOT NULL,
