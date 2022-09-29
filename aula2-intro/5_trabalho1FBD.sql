@@ -88,7 +88,7 @@ create table locais (
 	nome varchar(50) NOT NULL,
 	bloco varchar(50),
 	id_cen int NOT NULL,
-	lot int NOT NULL,
+	lot int,
 	descr varchar (100) NOT NULL,
 	tipo varchar(50) NOT NULL,
 	primary key (id_loc),
